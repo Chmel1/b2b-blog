@@ -19,13 +19,20 @@ export default function Home(){
 
             <div className = "mt-6 space-y-4">
                 {articles.map(article =>(
-                    <div key = {article.id} className = "border p-4 rounded shadow">
+                    <Link 
+                        key={article.id} 
+                        to={`/articles/${article.id}`} 
+                        className="block border p-4 rounded shadow hover:bg-gray-50 transition duration-200"
+                    >
                         <h2 className = "text-xl font-bold">
-                            <Link to = {`/articles/${article.id}`}>{article.title}</Link>
+                            
+                            {article.title}
                         </h2>
+                        
+                        
                         <p className = "text-gray-600">{article.created_at}</p>
                         <p className = "mt-2">{article.content.substring(0,100)}...</p>
-                    </div>
+                    </Link>
                 ))}
             </div>
         </div>
