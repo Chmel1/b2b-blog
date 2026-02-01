@@ -13,7 +13,9 @@ export default function Home(){
     }, []);
 
     return(
-        <div className = "container mx-auto p-4">
+        //container mx-auto p-4
+        //max-w-3xl mx-auto p-4
+        <div className = "container mx-auto p-10">
             <h1 className = "text-3xl font-bold mb-4">Блог B2B</h1>
             <Link to = "/create" className = "bg-blue-500 text-white px-4 py-2 rounded">Написать статью</Link>
 
@@ -31,7 +33,7 @@ export default function Home(){
                         
                         
                         <p className = "text-gray-600">{article.created_at}</p>
-                        <p className = "mt-2">{article.content.substring(0,100)}...</p>
+                        <p className = "mt-2">{article.content.substring(0,700)}...</p>
                     </Link>
                 ))}
             </div>
