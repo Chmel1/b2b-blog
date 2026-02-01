@@ -10,7 +10,7 @@ class CommentFactory extends Factory
     {
         return [
             'author_name' => fake()->name(),
-            'content' => fake()->sentence(10),
+            'content' => fake()->realText(200),
         ];
     }
 }

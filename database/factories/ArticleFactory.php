@@ -13,8 +13,8 @@ class ArticleFactory extends Factory
     public function definition(): array
     {
         return [
-            'title' => fake()->sentence(6),       
-            'content' => fake()->paragraphs(3, true), 
+            'title' => fake()->realText(50),       
+            'content' => fake()->realText(1000), 
             'created_at' => fake()->dateTimeBetween('-1 month', 'now'),
         ];
     }

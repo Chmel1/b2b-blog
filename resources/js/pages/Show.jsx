@@ -3,7 +3,7 @@ import axios from 'axios';
 import { useParams, Link } from 'react-router-dom';
 
 export default function Show() {
-    const { id } = useParams(); // Получаем ID из URL (например, /article/1)
+    const { id } = useParams();
     const [article, setArticle] = useState(null);
     const [commentAuthor, setCommentAuthor] = useState('');
     const [commentContent, setCommentContent] = useState('');
@@ -22,13 +22,13 @@ export default function Show() {
             author_name: commentAuthor,
             content: commentContent
         }).then(response => {
-            // Добавляем новый коммент в список без перезагрузки страницы
-            const newComment = response.data; // Или response.data.data, зависит от ресурса
+            
+            const newComment = response.data; 
             setArticle({
                 ...article,
                 comments: [...article.comments, newComment]
             });
-            // Очищаем форму
+            
             setCommentAuthor('');
             setCommentContent('');
         }).catch(error => {
