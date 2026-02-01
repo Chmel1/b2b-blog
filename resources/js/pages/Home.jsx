@@ -27,8 +27,11 @@ export default function Home(){
                         className="block border p-4 rounded shadow hover:bg-gray-50 transition duration-200"
                     >
                         <h2 className = "text-xl font-bold">
+                            
                             {article.title}
                         </h2>
+                        
+                        
                         <p className = "text-gray-600">{article.created_at}</p>
                         <p className = "mt-2">{article.content.substring(0,700)}...</p>
                     </Link>
